@@ -1,3 +1,11 @@
-<h1>One Rocket</h1>
+<div class="container">
+  <h1><%=  @rocket.name %></h1>
 
-<%= @rocket %>
+  <div class="cards">
+    <div class="card">
+      <p> Price: <%= @rocket.price %></p>
+      <p> Fuel: <%= @rocket.fuel %></p>
+      <p> Description: <%= @rocket.description %></p>
+    </div>
+  </div>
+</div>
