@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Marvel at our glorious rockets</h1>
+  <br>
+    <div class="cards">
+      <% @rockets.each do |rocket| %>
+      <div class="card">
+        <p> Name: <%= rocket.name %> </p>
+        <p> Price: <%= rocket.price %></p>
+        <p> Fuel: <%= rocket.fuel %></p>
+        <p> Description: <%= rocket.description %></p>
+      </div>
+      <% end %>
+  </div>
+</div>
