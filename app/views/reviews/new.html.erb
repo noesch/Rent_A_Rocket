@@ -1,0 +1,6 @@
+<h1>Hi</h1>
+<%= simple_form_for [@booking, @review] do |f|%>
+<%= f.input :comment %>
+<%= f.input :rating %>
+<%= f.submit "create", class: "btn btn-primary"%>
+<% end %>
