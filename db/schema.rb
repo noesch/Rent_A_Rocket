@@ -10,14 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+model-bookings
+ActiveRecord::Schema.define(version: 2021_08_17_082509) do
+
 ActiveRecord::Schema.define(version: 2021_08_17_083113) do
+ master
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+model-bookings
+  create_table "bookings", force: :cascade do |t|
+    t.text "status"
+    t.text "user_review"
+    t.text "rocket_review"
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
     t.string "comment"
+ master
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
