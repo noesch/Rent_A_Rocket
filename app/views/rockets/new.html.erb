@@ -1,9 +1,13 @@
-<h1>Create a new rocket</h1>
+<div class="container">
+  <h1>Create a new rocket</h1>
 
-<%= simple_form_for @rocket do |f| %>
- <%= f.input :name %>
- <%= f.input :price %>
- <%= f.input :fuel %>
- <%= f.input :description %>
- <%= f.submit "Create Rocket", class: "btn btn-primary" %>
-<% end %>
+  <%= simple_form_for @rocket do |f| %>
+  <%= f.input :name %>
+  <%= f.input :price %>
+  <%= f.input :fuel %>
+  <%= f.input :description %>
+  <%= f.submit "Create Rocket", class: "btn btn-primary" %>
+  <% end %>
+
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary"%>
+</div>
