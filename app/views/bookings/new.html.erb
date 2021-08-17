@@ -1,0 +1,9 @@
+<p>Test für bookings</p>
+
+<%= simple_form_for @booking do |f| %>
+        <%= f.input :status %>
+        <%= f.input :user_review %>
+        <%= f.input :rocket_review %>
+
+        <%= f.submit "Create Booking", class: "btn btn-primary"%>
+      <% end %>
