@@ -1,8 +1,20 @@
-<div class="container">
-  <h1>Pages#home</h1>
-  <p>Find me in app/views/pages/home.html.erb</p>
-  <p>Our Awesome Landing Page</p>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
 
-  <%= link_to "Log In", new_user_session_path, class: "btn btn-primary"%>
-  <%= link_to "Our Rockets", rockets_path, class: "btn btn-primary"%>
-</div>
+<body>
+  <div class="container">
+    <div class="header">
+      <%= link_to "Our Rockets", rockets_path, class: "btn btn-primary"%>
+      <div class="sign_up">
+        <%= link_to "Log In", new_user_session_path, class: "btn btn-primary"%>
+        <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="profile">
+      </div>
+    </div>
+    <h1>Rent a Rocket</h1>
+    <p>Find me in app/views/pages/home.html.erb</p>
+    <p>Our Awesome Landing Page</p>
+  </div>
+</body>
