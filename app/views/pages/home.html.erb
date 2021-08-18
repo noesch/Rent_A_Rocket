@@ -1,9 +1,24 @@
-<div class="container">
-  <h1>Welcome to Rent a Rocket</h1>
-  <br>
-  <p>The number one place on this planet to rent Rockets </p>
-  <p> All sizes, colors and shapes</p>
-  <p>Now with organic fuel</p>
 
-  <%= link_to "Our Rockets", rockets_path, class: "btn btn-primary"%>
-</div>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <div class="header">
+      <%= link_to "Our Rockets", rockets_path, class: "btn btn-primary"%>
+      <div class="dropdown sign_up">
+        <img src="https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg" alt="profile">
+        <div class="dropdown-content">
+          <%= link_to "Log In", new_user_session_path%>
+          <br>
+          <%= link_to "Sign up", new_user_session_path%>
+        </div>
+      </div>
+    </div>
+    <h1>Rent a Rocket</h1>
+    <p>Our Awesome Landing Page</p>
+  </div>
+</body>

@@ -1,1 +1,65 @@
 // Specific CSS for your home-page
+.container {
+  text-align: center;
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/andromeda-galaxy-royalty-free-image-1585682435.jpg");
+  background-position: center;
+  background-size: cover;
+  color: rgb(212, 235, 255);
+  text-shadow: 2px 2px 2px rgba(100, 100, 100, 0.7);
+  letter-spacing: 1px;
+  padding: 10px 200px 200px 200px;
+  font-size: 20px;
+  font-family: 'Raleway', sans-serif;
+  line-height: 30px;
+  height: 100vh;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.container h1 {
+  font-size: 60px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+.btn {
+  border-radius: 10px;
+  box-shadow: 2px 2px 4px rgba(30, 30, 30, 0.5);
+  opacity: 0.7;
+}
+
+.sign_up {
+  display: flex;
+}
+
+.sign_up img{
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #a3a3a3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.4);
+  padding: 12px 16px;
+  z-index: 1;
+  border-radius: 20px;
+  opacity: 0.8;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
