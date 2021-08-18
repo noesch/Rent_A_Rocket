@@ -2,10 +2,12 @@
   <h1>All your bookings</h1>
   <div class="cards">
     <% @bookings.each do |booking| %>
-      <%= link_to booking_path(booking) do %>
-        <div class="card">
-          <p> Status: <%= booking.status %> </p>
-        </div>
+      <% if policy(booking).edit? %>
+        <%= link_to booking_path(booking) do %>
+          <div class="card">
+            <p> Status: <%= booking.status %> </p>
+          </div>
+        <% end %>
       <% end %>
     <% end %>
   </div>
