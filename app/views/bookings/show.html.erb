@@ -1,16 +1,18 @@
 <div class="container">
   <h1>Your Booking</h1>
   <div class="cards">
-    <div class="card">
-      <p>Status: <%= @booking.status %></p>
-      <% if @booking.review %>
-        <p>Rating: <%= @booking.review.rating %></p>
-        <p>Comment: <%=  @booking.review.comment %></p>
-      <% else %>
-        <p> Not rated yet.</p>
-        <p> No comment yet.</p>
-      <% end %>
-    </div>
+    <% unless @rocket.bookings.empty? %>
+      <div class="card">
+        <p>Status: <%= @booking.status %></p>
+        <% if @booking.review %>
+          <p>Rating: <%= @booking.review.rating %></p>
+          <p>Comment: <%=  @booking.review.comment %></p>
+        <% else %>
+          <p> Not rated yet.</p>
+          <p> No comment yet.</p>
+        <% end %>
+      </div>
+    <% end %>
   </div>
   <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
   <%= link_to "Create review", new_booking_review_path(@booking), class: "btn btn-primary" %>
