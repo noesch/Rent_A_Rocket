@@ -8,4 +8,7 @@
       <p> Description: <%= @rocket.description %></p>
     </div>
   </div>
+  <%= link_to "Create booking", new_rocket_booking_path(@rocket), class: "btn btn-primary" %>
+  <%= link_to "Show my bookings", bookings_path, class: "btn btn-primary" %>
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
 </div>
