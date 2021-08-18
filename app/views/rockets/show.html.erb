@@ -6,8 +6,14 @@
       <p> Price: <%= @rocket.price %></p>
       <p> Fuel: <%= @rocket.fuel %></p>
       <p> Description: <%= @rocket.description %></p>
+      <br>
+      <% if policy(@rocket).update? %>
+        <%= @booking.status %>
+        <%= link_to "Confirm Booking", booking_path( @booking), method: "patch", class: "btn btn-primary"%>
+      <% end %>
     </div>
   </div>
+  <br>
   <%= link_to "Create booking", new_rocket_booking_path(@rocket), class: "btn btn-primary" %>
   <%= link_to "Show my bookings", bookings_path, class: "btn btn-primary" %>
   <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
