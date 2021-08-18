@@ -1,15 +1,20 @@
 class BookingsController < ApplicationController
+  skip_after_action :verify_authorized
+  skip_after_action :verify_policy_scoped
   def index
     @bookings = current_user.bookings
+
   end
 
   def show
     @booking = Booking.find(params[:id])
+    authorize @booking
   end
 
   def new
     @booking = Booking.new
     @rocket = Rocket.find(params[:rocket_id])
+    authorize @booking
   end
 
   def create
@@ -22,4 +27,12 @@ class BookingsController < ApplicationController
       render :new
     end
   end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.status = "confirmed"
+    @booking.save
+    redirect_to rocket_path(@booking.rocket)
+  end
+
 end
