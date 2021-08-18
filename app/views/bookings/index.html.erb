@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>All your bookings</h1>
+  <div class="cards">
+    <% @bookings.each do |booking| %>
+      <%= link_to booking_path(booking) do %>
+        <div class="card">
+          <p> Status: <%= booking.status %> </p>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
+</div>
