@@ -6,7 +6,7 @@
       <p> Price: <%= @rocket.price %></p>
       <p> Fuel: <%= @rocket.fuel %></p>
       <p> Description: <%= @rocket.description %></p>
-      <p> Address: <%= @rocket.address git%>
+      <p> Address: <%= @rocket.address %>
       <br>
       <% unless @rocket.bookings.empty? %>
         <% if policy(@rocket).update? %>
