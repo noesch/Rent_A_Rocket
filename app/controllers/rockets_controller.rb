@@ -25,8 +25,9 @@ class RocketsController < ApplicationController
   end
 
   def create
-    authorize @rocket
     @rocket = Rocket.new(rocket_params)
+    @rocket.user = current_user
+    authorize @rocket
     if @rocket.save
       redirect_to rocket_path(@rocket)
     else

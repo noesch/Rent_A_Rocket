@@ -5,7 +5,7 @@ class RocketPolicy < ApplicationPolicy
     end
   end
 
-  def new
+  def new?
     return true
   end
 
