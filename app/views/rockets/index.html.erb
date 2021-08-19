@@ -3,15 +3,13 @@
   <br>
     <div class="cards">
       <% @rockets.each do |rocket| %>
-        <% if policy(rocket).edit? %>
-          <%= link_to rocket_path(rocket) do %>
-            <div class="card">
-              <p> Name: <%= rocket.name %> </p>
-              <p> Price: <%= rocket.price %></p>
-              <p> Fuel: <%= rocket.fuel %></p>
-              <p> Description: <%= rocket.description %></p>
-            </div>
-          <% end %>
+        <%= link_to rocket_path(rocket) do %>
+          <div class="card">
+            <p> Name: <%= rocket.name %> </p>
+            <p> Price: <%= rocket.price %></p>
+            <p> Fuel: <%= rocket.fuel %></p>
+            <p> Description: <%= rocket.description %></p>
+          </div>
         <% end %>
       <% end %>
   </div>
