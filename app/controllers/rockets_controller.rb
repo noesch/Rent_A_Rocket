@@ -3,6 +3,14 @@ class RocketsController < ApplicationController
 
   def index
     @rocket = policy_scope(Rocket).order(created_at: :desc)
+
+    @markers = @rocket.geocoded.map do |rocket|
+      {
+        lat: rocket.latitude,
+        lng: rocket.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { rocket: rocket })
+      }
+    end
   end
 
   def show
