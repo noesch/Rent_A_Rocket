@@ -12,14 +12,15 @@ Rocket.destroy_all
 User.destroy_all
 
 user = User.create(email: "test@test.com", password: "123123")
+user_two = User.create(email: "user@user.com", password: "123123")
 
 puts "Building database..."
 
-rocket_one = { name: "Falcon 9", price: 10000, fuel: "Kerosin", description: "really cool spaceship", user: user }
-rocket_two = { name: "Blue Origin", price: 20000, fuel: "H2O", description: "Amazong rocket", user: user }
-rocket_three = { name: "Challenger", price: 5, fuel: "Diesel", description: "For the daring", user: user }
-rocket_four = { name: "Saturn 5", price: 8000, fuel: "Corn starch", description: "Not fancy but it'll do", user: user }
-rocket_five = { name: "UFO", price: 500000000, fuel: "Micro Black Holes", description: "Welcome to the future", user: user }
+rocket_one = { name: "Falcon 9", price: 10000, fuel: "Kerosin", description: "really cool spaceship", user: user, address: "Balanstraße 4, München" }
+rocket_two = { name: "Blue Origin", price: 20000, fuel: "H2O", description: "Amazong rocket", user: user, address: "Schillerplatz, Stuttgart" }
+rocket_three = { name: "Challenger", price: 5, fuel: "Diesel", description: "For the daring", user: user, address: "Erhardstraße 8, Schwäbisch Gmünd" }
+rocket_four = { name: "Saturn 5", price: 8000, fuel: "Corn starch", description: "Not fancy but it'll do", user: user_two, address: "Fischmarkt, Hamburg" }
+rocket_five = { name: "UFO", price: 500000000, fuel: "Micro Black Holes", description: "Welcome to the future", user: user_two, address: "Brandenburger Tor, Berlin" }
 
 [rocket_one, rocket_two, rocket_three, rocket_four, rocket_five].each do |rocket|
   Rocket.create(rocket)

@@ -8,7 +8,8 @@ class RocketsController < ApplicationController
       {
         lat: rocket.latitude,
         lng: rocket.longitude,
-        info_window: render_to_string(partial: "info_window", locals: { rocket: rocket })
+        info_window: render_to_string(partial: "info_window", locals: { rocket: rocket }),
+        image_url: helpers.asset_url('saucer.gif')
       }
     end
   end
