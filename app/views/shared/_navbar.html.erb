@@ -1,8 +1,32 @@
-<div class="navbar">
-  <% if current_user %>
-    <%= link_to "Log out", destroy_user_session_path, method: "delete"%>
-    <% else %>
-    <%= link_to "Log in", new_user_session_path %>
-    <%= link_to "Sign up", new_user_registration_path %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to root_path, class: "navbar-brand" do %>
+    <%= image_tag "https://library.kissclipart.com/20180901/woe/kissclipart-cartoon-rocket-clipart-spacecraft-cartoon-clip-art-72938db0c12d0388.jpg" %>
   <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", root_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Bookings", bookings_path, class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://t4.ftcdn.net/jpg/00/64/67/63/360_F_64676383_LdbmhiNM6Ypzb3FM4PPuFP9rHe7ri8Ju.jpg", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <% if current_user %>
+            <%= link_to "Log out", destroy_user_session_path, method: "delete", class: "dropdown-item"%>
+            <% else %>
+            <%= link_to "Log in", new_user_session_path, class: "dropdown-item" %>
+            <%= link_to "Sign up", new_user_registration_path, class: "dropdown-item" %>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+  </div>
 </div>
