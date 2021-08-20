@@ -11,11 +11,13 @@
               <%= cl_image_tag("https://res.cloudinary.com/disabu2ji/image/upload/v1629381653/Rent%20a%20Rocket/soyuz_rocket_launch_rocket_dxw0wg.jpg", width: 340, height: 200, crop: :fill) %>
             <% end %>
             <br>
-            <p> Name: <%= rocket.name %> </p>
-            <p> Price: <%= rocket.price %></p>
-            <p> Fuel: <%= rocket.fuel %></p>
-            <p> Description: <%= rocket.description %></p>
-            <p> Address: <%= rocket.address %>
+            <p> <%= rocket.name %> </p>
+            <div class="card-header">
+              <p> <%= rocket.price %>€</p>
+              <p> &#x26FD; <%= rocket.fuel %></p>
+            </div>
+            <p><%= rocket.description %></p>
+            <p> &#x1F30D; <%= rocket.address %>
           </div>
         <% end %>
       <% end %>

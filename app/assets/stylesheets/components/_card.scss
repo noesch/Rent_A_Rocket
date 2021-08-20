@@ -3,6 +3,13 @@
   width: 350px;
   border: solid 2px lightgray;
   padding: 5px;
+  color: black;
+  margin-bottom: 20px;
+  text-decoration: none;
+  a {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 
@@ -11,4 +18,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+p {
+  text-align: left;
 }
