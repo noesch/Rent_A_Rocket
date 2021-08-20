@@ -1,5 +1,7 @@
 <div class="container">
   <h1>Your Booking</h1>
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary my-2" %>
+  <%= link_to "Create review", new_booking_review_path(@booking), class: "btn btn-primary my-2" %>
   <div class="cards">
     <div class="card">
       <p>Status: <%= @booking.status %></p>
@@ -12,6 +14,4 @@
       <% end %>
     </div>
   </div>
-  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
-  <%= link_to "Create review", new_booking_review_path(@booking), class: "btn btn-primary" %>
 </div>

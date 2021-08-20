@@ -1,5 +1,6 @@
 <div class="container">
   <h1>All your bookings</h1>
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary my-2" %>
   <div class="cards">
     <% @bookings.each do |booking| %>
       <% if policy(booking).create? %>
@@ -12,6 +13,4 @@
       <% end %>
     <% end %>
   </div>
-
-  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
 </div>

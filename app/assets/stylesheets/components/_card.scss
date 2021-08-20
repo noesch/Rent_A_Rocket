@@ -7,10 +7,7 @@
   margin-bottom: 20px;
   text-decoration: none;
   box-shadow: 10px 5px 5px grey;
-  a {
-    text-decoration: none;
-    color: black;
-  }
+  border-radius: 4px;
 }
 
 
@@ -19,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 24px;
 }
 
 .card-header {
@@ -41,4 +39,9 @@
   p {
     text-align: left;
   }
+}
+
+.booked {
+  border: solid 2px lightgray;
+  padding: 24px 16px;
 }

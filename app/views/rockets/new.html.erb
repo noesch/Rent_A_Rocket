@@ -1,5 +1,6 @@
 <div class="container">
   <h1>Create a new rocket</h1>
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary my-2"%>
 
   <%= simple_form_for @rocket do |f| %>
   <%= f.input :name %>
@@ -8,8 +9,6 @@
   <%= f.input :description %>
   <%= f.input :address %>
   <%= f.input :photo, as: :file %>
-  <%= f.submit "Create Rocket", class: "btn btn-primary" %>
+  <%= f.submit "Create Rocket", class: "btn btn-primary my-2" %>
   <% end %>
-
-  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary"%>
 </div>
