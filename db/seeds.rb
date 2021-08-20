@@ -20,7 +20,7 @@ rocket_one = { name: "Falcon 9", price: 10000, fuel: "Kerosin", description: "re
 rocket_two = { name: "Blue Origin", price: 20000, fuel: "H2O", description: "Amazong rocket", user: user, address: "Schillerplatz, Stuttgart" }
 rocket_three = { name: "Challenger", price: 5, fuel: "Diesel", description: "For the daring", user: user, address: "Erhardstraße 8, Schwäbisch Gmünd" }
 rocket_four = { name: "Saturn 5", price: 8000, fuel: "Corn starch", description: "Not fancy but it'll do", user: user_two, address: "Fischmarkt, Hamburg" }
-rocket_five = { name: "UFO", price: 500000000, fuel: "Micro Black Holes", description: "Welcome to the future", user: user_two, address: "Brandenburger Tor, Berlin" }
+rocket_five = { name: "UFO", price: 500000, fuel: "Black Holes", description: "Welcome to the future", user: user_two, address: "Brandenburger Tor, Berlin" }
 
 [rocket_one, rocket_two, rocket_three, rocket_four, rocket_five].each do |rocket|
   Rocket.create(rocket)
