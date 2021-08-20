@@ -1,6 +1,10 @@
 <div class="container">
   <h1><%=  @rocket.name %></h1>
 
+  <%= link_to "Book rocket", new_rocket_booking_path(@rocket), class: "btn btn-primary my-2" %>
+  <%= link_to "Show my bookings", bookings_path, class: "btn btn-primary my-2" %>
+  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary my-2" %>
+
   <div class="cards">
     <div class="card">
       <% if @rocket.photo.attached? %>
@@ -22,16 +26,14 @@
         <p> &#x1F30D; <%= @rocket.address %>
       </div>
       <br>
-      <% unless @rocket.bookings.empty? %>
-        <% if policy(@rocket).update? %>
-          <%= @booking.status %>
-          <%= link_to "Confirm Booking", booking_path( @booking), method: "patch", class: "btn btn-primary"%>
+      <div class="booked">
+        <% unless @rocket.bookings.empty? %>
+          <% if policy(@rocket).update? %>
+            <%= link_to "Confirm booking", booking_path( @booking), method: "patch", class: "btn btn-primary"%>
+            <%= @booking.status %>
+          <% end %>
         <% end %>
-      <% end %>
+      </div>
     </div>
   </div>
-  <br>
-  <%= link_to "Create booking", new_rocket_booking_path(@rocket), class: "btn btn-primary" %>
-  <%= link_to "Show my bookings", bookings_path, class: "btn btn-primary" %>
-  <%= link_to "Back to all rockets", rockets_path, class: "btn btn-primary" %>
 </div>
