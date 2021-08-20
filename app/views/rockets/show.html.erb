@@ -26,9 +26,9 @@
       <div class="booked">
         <% unless @rocket.bookings.empty? %>
           <% if policy(@rocket).update? %>
-            <%= link_to "Confirm booking", booking_path( @booking), method: "patch", class: "btn btn-primary"%>
-            <%= @booking.status %>
+            <%= link_to "Confirm booking", booking_path(@booking), method: "patch", class: "btn btn-primary"%>
           <% end %>
+          <%= @booking.status %>
         <% end %>
       </div>
     </div>
