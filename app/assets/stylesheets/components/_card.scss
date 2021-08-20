@@ -6,6 +6,7 @@
   color: black;
   margin-bottom: 20px;
   text-decoration: none;
+  box-shadow: 10px 5px 5px grey;
   a {
     text-decoration: none;
     color: black;
@@ -26,6 +27,18 @@
   background-color: white;
 }
 
-p {
-  text-align: left;
+
+.description {
+  font-size: small;
+
+  p {
+  text-align: center;
+  }
+}
+
+.address {
+  font-size: small;
+  p {
+    text-align: left;
+  }
 }

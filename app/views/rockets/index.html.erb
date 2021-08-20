@@ -1,6 +1,8 @@
 <div class="container">
   <h1>Marvel at our glorious rockets</h1>
   <br>
+  <%= link_to "Create rocket", new_rocket_path, class: "btn btn-primary"%>
+  <br>
     <div class="cards">
       <% @rockets.each do |rocket| %>
         <%= link_to rocket_path(rocket) do %>
@@ -11,13 +13,18 @@
               <%= cl_image_tag("https://res.cloudinary.com/disabu2ji/image/upload/v1629381653/Rent%20a%20Rocket/soyuz_rocket_launch_rocket_dxw0wg.jpg", width: 340, height: 200, crop: :fill) %>
             <% end %>
             <br>
-            <p> <%= rocket.name %> </p>
+            <h3> <%= rocket.name %> </h3>
             <div class="card-header">
               <p> <%= rocket.price %>€</p>
               <p> &#x26FD; <%= rocket.fuel %></p>
             </div>
-            <p><%= rocket.description %></p>
-            <p> &#x1F30D; <%= rocket.address %>
+            <div class="description">
+              <p><%= rocket.description %></p>
+            </div>
+              <br>
+            <div class="address">
+              <p> &#x1F30D; <%= rocket.address %>
+            </div>
           </div>
         <% end %>
       <% end %>
@@ -27,7 +34,4 @@
      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
   </div>
   </div>
-  <br>
-  <%= link_to "Create rocket", new_rocket_path, class: "btn btn-primary"%>
-
 </div>
